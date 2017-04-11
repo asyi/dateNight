@@ -52,9 +52,12 @@ body, html {
 
 h1 {
     font-family: 'Clicker script', cursive;
-    font-size: 3em;
+    font-size: 4em;
     color: white;
+    padding: 0;
+    margin: 4;
 }
+
 
 #btn {
     background-color: #8bcb2c;
