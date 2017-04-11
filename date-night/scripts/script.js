@@ -1,31 +1,31 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  $("#btn").click(function() {
+
+    var ids = [1, 2, 3, 4];
+
+    // do this a bunch of times over and over again
+      var delay = 100;
+      var timer = setInterval(play, delay);
 
 
+    function play(counter) {
+        var winid = ids[Math.floor(Math.random() * ids.length)];
+        console.log("decision made");
+            $(".box").removeClass("boxChoosing");
+        $("#" + winid).addClass("boxChoosing");
+    }
 
-    function shuffle(array) {
-      var m = array.length, t, i;
 
-      // While there remain elements to shuffle…
-      while (m) {
+    function finish() {
+      alert("done");
+    }
 
-        // Pick a remaining element…
-        i = Math.floor(Math.random() * m--);
 
-        // And swap it with the current element.
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
-      }
-
-      return array;
-  }
-// WHEN THE BUTTON IS CLICKED
-
-    $(function() {
-        $("button").click(function() {
-            var $all = $(".square").removeClass("selected");
-                $(shuffle($all).slice(0,3)).addClass("selected");
-
-        });
+      setTimeout(function() {
+      clearInterval( timer );
+      $("#" + winid).addClass("boxWin");
+        },
+        Math.round(Math.random() * (3000 - 500)) + 500 // Generate random time between 500ms and 3s.
+    );
     });
 });
