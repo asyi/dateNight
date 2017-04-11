@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#btn").click(function() {
 
     var ids = [1, 2, 3, 4];
+    $(".box").addClass("opacity");
 
     // do this a bunch of times over and over again
       var delay = 100;
@@ -11,8 +12,10 @@ $(document).ready(function() {
     function play(counter) {
         winid = ids[Math.floor(Math.random() * ids.length)];
         console.log("decision made");
-            $(".box").removeClass("boxChoosing");
+        $(".box").removeClass("boxChoosing");
+        $(".box").removeClass("non-opacity");
         $("#" + winid).addClass("boxChoosing");
+        $("#" + winid).addClass("non-opacity");
     }
 
 

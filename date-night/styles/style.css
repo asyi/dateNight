@@ -29,10 +29,19 @@ body, html {
 
 .boxChoosing {
     border: 5px solid #8bcb2c;
+    opacity: 1;
 }
 
 .boxWin {
     border: 5px solid #8bcb2c;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.non-opacity {
+    opacity: 1;
 }
 
 #header {
