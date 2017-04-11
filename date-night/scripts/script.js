@@ -5,7 +5,7 @@ $(document).ready(function() {
     $(".box").addClass("opacity");
 
     // do this a bunch of times over and over again
-      var delay = 100;
+      var delay = 100; // change this number to speed up or slow down the "spinning"
       var timer = setInterval(play, delay);
       var winid;
 

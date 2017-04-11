@@ -1,8 +1,8 @@
 body, html {
     height: 100%;
     padding: 0;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 2vh; /* Change this for overall left margin */
+    margin-right: 2vh; /* Change this for overall right margin */
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -37,7 +37,7 @@ body, html {
 }
 
 .opacity {
-    opacity: 0.5;
+    opacity: 0.5; /* change this number for less or more grey on the images */ 
 }
 
 .non-opacity {
@@ -59,15 +59,6 @@ body, html {
     text-align: center;
 }
 
-h1 {
-    font-family: 'Clicker script', cursive;
-    font-size: 4em;
-    color: white;
-    padding: 0;
-    margin: 4;
-}
-
-
 #btn {
     background-color: #8bcb2c;
     cursor: pointer; cursor: hand;
@@ -81,3 +72,23 @@ h1 {
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+h1 {
+    font-family: 'Clicker script', cursive;
+    font-size: 4em;
+    color: white;
+    padding: 0;
+    margin: 4;
+}
+
+@media only screen
+  and (max-device-width: 450px) {
+    h1 {
+        font-size: 8em;
+    }
+
+    #btn {
+        font-size: 40px;
+        padding: 15px 32px;
+    }
+  }
